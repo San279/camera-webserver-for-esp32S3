@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="height: 100%; width: 1750px;background-color: #25274D;">
+  <div style="margin-left:44%; padding-top: 20px;">
+    <label for="className" class="class_label">Class: </label>
+    <input type="text" id="class" name="className" class="class_input">
+  </div>
+  <br />
+  <div class="img_container">
+    <img id="stream" class="stream" crossorigin="anonymous" />
+    <br />
+    <label for="resolutionText" class="resolution_label">Resolution: </label>
+    <select id="resolution" class="resolution" name="resolutionTxt">
+      <option value="160120">QQVGA 160X120</option>
+      <option value="240240">240X240</option>
+      <option value="640480">VGA 640X480</option>
+      <option value="800600">SVGA 800X600</option>
+      <option value="1024768">XGA 1024X768</option>
+      <option value="12801024">SXGA 1280X1024</option>
+      <option value="16001200">UXGA 1600X1200</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="column">
+      <button id="capture" class="capture" type="button">Capture</button>
+      <button id="stop" type="button" class="stop">Stop</button>
+      <label for="intervalName" class="interval_label">Interval: </label>
+      <input type="number" id="interval" class="interval" name="intervalName">
+      <label for="instanceName" class="instance_label">Instance: </label>
+      <input type="number" id="instance" class="instance" name="instanceName">
+      <br />
+      <br />
+      <label for="brightName" class="bright_label">Brightness: </label>
+      <select id="brightness" class="brightness" name="brightName">
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <label for="contrastName" class="contrast_label">Contrast: </label>
+      <select id="contrast" class="contrast" name="contrastName">
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <label for="saturationName" class="saturation_label">Saturation: </label>
+      <select id="saturation" class="saturation" name="saturationName">
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <label for="aeName" class="ae_label">Ae Level: </label>
+      <select id="ae" class="ae" name="aeName">
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <br />
+      <br />
+      <label for="effectName" class="effect_label">Effects: </label>
+      <select id="effect" class="effect" name="effectName">
+        <option value="0">No Effect</option>
+        <option value="1">Negative</option>
+        <option value="2">Grayscale</option>
+        <option value="3">Red Tint</option>
+        <option value="4">Green Tint</option>
+        <option value="5">Blue Tint</option>
+        <option value="6">Sepia</option>
+      </select>
+      <label for="modeName" class="mode_label">Mode: </label>
+      <select id="mode" class="mode" name="modeName">
+        <option value="0">Auto</option>
+        <option value="1">Sunny</option>
+        <option value="2">Cloudy</option>
+        <option value="3">Office</option>
+        <option value="4">Home</option>
+      </select>
+      <button id="changeSetting" class="change">Change</button>
+      <br />
+      <br />
+      <button id="download" class="download">Download</button>
+      <button id="clear" type="button" class="clear">Clear</button>
+
+    </div>
+    <div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div id="galleryImg" class="galleryImg">
+  </div>
+  <div id="savedImg" class="savedImg">
+  </div>
+  <br />
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
