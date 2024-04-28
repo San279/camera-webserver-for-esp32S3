@@ -1,4 +1,4 @@
-var ipAdress = "http://192.168.1.30/";
+var ipAdress = "***";
 var classLabel = document.getElementById("class");
 var captureButton = document.getElementById("capture");
 var clearButton = document.getElementById("clear");
