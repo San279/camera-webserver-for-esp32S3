@@ -105,6 +105,8 @@ function createDeleteButton(picIndex) {
   deleteButton.setAttribute("onclick", "deleteButton(this.id)");
   return deleteButton;
 }
+
+let testUrl = [];
 async function savePicture(picIndex) {
   const hiddenCanvas = document.createElement("canvas");
   hiddenCanvas.id = "saved" + picIndex;
@@ -149,6 +151,7 @@ function deleteButton(pictureId) {
   }
 }
 
+/*
 function checkSetting() {
   var params;
   console.log(brightness.value);
@@ -175,6 +178,8 @@ function checkSetting() {
   }
   return params;
 }
+*/
+
 
 async function changeBrightness() {
   var selectedBrightness = brightness.options[brightness.selectedIndex].value;
@@ -270,40 +275,68 @@ async function ChangeSetting(params) {
       picture.setAttribute("src", ipAdress.toString());
     })
 }
-
-downloadButton.addEventListener("click", function () {
-  var downloadLink = document.createElement("a");
-  //var zip = new JSZip();
-  //var img = zip.folder("images");
+/*
+downloadButton.addEventListener("click", async function () {
 
   if (galleryDict.size == 0) {
     alert("No image found!!");
     return;
   }
+  var count = 0;
   for (const value of galleryDict.values()) {
-    //console.log(value);
-    //var savable = new Image();
+    console.log(count);
+    count++;
+    var downloadLink = document.createElement("a");
     downloadLink.href = value;
-    downloadLink.download = classLabel.value + ".jpg"; // Specify the filename for download
-    //zip.file(downloadLink.download, savable.src.substr(savable.src.indexOf(',')+1), {base64: true});
+    downloadLink.download = "image" + ".jpg"; // Specify the filename for download
     
     //img.src.substr(downloadLink);
     document.body.appendChild(downloadLink);
     downloadLink.click();
+    document.body.removeChild(downloadLink);
+    if (count > 9){
+      await new Promise(resolve => setTimeout(resolve,200));
+      count = 0;
+    }
+  }
+})
+*/
+downloadButton.addEventListener("click", async function () {
+  var downloadLink = document.createElement("a");
+  const zip = new JSZip();
+  if (galleryDict.size == 0) {
+    alert("No image found!!");
+    return;
+  }
+  var count = 0;
+  for (const value of galleryDict.values()) {
+   let data = value.substr(value.indexOf(",") + 1)
+   count++;
+   zip.file(classLabel.value.toString() + count + ".jpg", data, {base64: true})
   }
 
-  document.body.removeChild(downloadLink);
+  const zipFile = await zip.generateAsync({type: 'blob'});
+  downloadLink.download = "images_of_" + classLabel.value + '.zip';
+
+  const url = URL.createObjectURL(zipFile);
+  downloadLink.href = url;
+  downloadLink.style.display = 'none';
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  downloadLink.remove();
+  URL.revokeObjectURL(url);
 })
 
 
 function setResMap() {
   resMap.set("160120", 0);
   resMap.set("240240", 1);
-  resMap.set("640480", 2);
-  resMap.set("800600", 3);
-  resMap.set("1024768", 4);
-  resMap.set("12801024", 5);
-  resMap.set("16001200", 6);
+  resMap.set("320240", 2)
+  resMap.set("640480", 3);
+  resMap.set("800600", 4);
+  resMap.set("1024768", 5);
+  resMap.set("12801024", 6);
+  resMap.set("16001200", 7);
 }
 
 
