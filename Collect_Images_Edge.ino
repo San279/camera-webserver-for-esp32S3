@@ -58,6 +58,59 @@ static const char *_STREAM_TYPE_TXT = "Content-Type: text/plain";
 
 httpd_handle_t stream_httpd = NULL;
 
+void cameraSetup(int resolution) {
+  camera_config_t config;
+  config.ledc_channel = LEDC_CHANNEL_0;
+  config.ledc_timer = LEDC_TIMER_0;
+  config.pin_d0 = Y2_GPIO_NUM;
+  config.pin_d1 = Y3_GPIO_NUM;
+  config.pin_d2 = Y4_GPIO_NUM;
+  config.pin_d3 = Y5_GPIO_NUM;
+  config.pin_d4 = Y6_GPIO_NUM;
+  config.pin_d5 = Y7_GPIO_NUM;
+  config.pin_d6 = Y8_GPIO_NUM;
+  config.pin_d7 = Y9_GPIO_NUM;
+  config.pin_xclk = XCLK_GPIO_NUM;
+  config.pin_pclk = PCLK_GPIO_NUM;
+  config.pin_vsync = VSYNC_GPIO_NUM;
+  config.pin_href = HREF_GPIO_NUM;
+  config.pin_sscb_sda = SIOD_GPIO_NUM;
+  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_pwdn = PWDN_GPIO_NUM;
+  config.pin_reset = RESET_GPIO_NUM;
+  config.xclk_freq_hz = 20000000;
+  config.pixel_format = PIXFORMAT_JPEG;
+  if (resolution == 160120) {
+    config.frame_size = FRAMESIZE_QQVGA;
+  } else if (resolution == 240240) {
+    config.frame_size = FRAMESIZE_240X240;
+  } else if (resolution == 320240) {
+    config.frame_size = FRAMESIZE_QVGA;
+  } else if (resolution == 640480) {
+    config.frame_size = FRAMESIZE_VGA;
+  } else if (resolution == 800600) {
+    config.frame_size = FRAMESIZE_SVGA;
+  } else if (resolution == 1024768) {
+    config.frame_size = FRAMESIZE_XGA;
+  } else if (resolution == 12801024) {
+    config.frame_size = FRAMESIZE_SXGA;
+  } else if (resolution == 16001200) {
+    config.frame_size = FRAMESIZE_UXGA;
+  }else{
+    config.frame_size = FRAMESIZE_240X240;
+  }
+  config.jpeg_quality = 5;
+  config.fb_count = 2;
+  config.fb_location = CAMERA_FB_IN_PSRAM;
+  config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
+  esp_err_t err = esp_camera_init(&config);
+  if (err != ESP_OK) {
+    Serial.printf("Camera init failed with error 0x%x", err);
+  }else{
+    sensor_t *s = esp_camera_sensor_get();
+    s->set_vflip(s, 1);
+  }
+}
 static esp_err_t stream_handler(httpd_req_t *req) {
   camera_fb_t *fb = NULL;
   esp_err_t res = ESP_OK;
@@ -113,7 +166,7 @@ static esp_err_t stream_handler(httpd_req_t *req) {
     }
     //Serial.printf("MJPG: %uB\n",(uint32_t)(_jpg_buf_len));
   }
-   //httpd_resp_sendstr_chunk(req, "this is a test");
+  //httpd_resp_sendstr_chunk(req, "this is a test");
   return res;
 }
 
@@ -159,53 +212,7 @@ static esp_err_t setting_handler(httpd_req_t *req) {
         }
         if (key == "resolution") {
           esp_camera_deinit();
-          camera_config_t configt;
-          configt.ledc_channel = LEDC_CHANNEL_0;
-          configt.ledc_timer = LEDC_TIMER_0;
-          configt.pin_d0 = Y2_GPIO_NUM;
-          configt.pin_d1 = Y3_GPIO_NUM;
-          configt.pin_d2 = Y4_GPIO_NUM;
-          configt.pin_d3 = Y5_GPIO_NUM;
-          configt.pin_d4 = Y6_GPIO_NUM;
-          configt.pin_d5 = Y7_GPIO_NUM;
-          configt.pin_d6 = Y8_GPIO_NUM;
-          configt.pin_d7 = Y9_GPIO_NUM;
-          configt.pin_xclk = XCLK_GPIO_NUM;
-          configt.pin_pclk = PCLK_GPIO_NUM;
-          configt.pin_vsync = VSYNC_GPIO_NUM;
-          configt.pin_href = HREF_GPIO_NUM;
-          configt.pin_sscb_sda = SIOD_GPIO_NUM;
-          configt.pin_sscb_scl = SIOC_GPIO_NUM;
-          configt.pin_pwdn = PWDN_GPIO_NUM;
-          configt.pin_reset = RESET_GPIO_NUM;
-          configt.xclk_freq_hz = 20000000;
-          configt.pixel_format = PIXFORMAT_JPEG;
-          if (num == 160120) {
-            configt.frame_size = FRAMESIZE_QQVGA;
-          } else if (num == 240240) {
-            configt.frame_size = FRAMESIZE_240X240;
-          }else if(num == 320240){
-            configt.frame_size = FRAMESIZE_QVGA;
-          } else if (num == 640480) {
-            configt.frame_size = FRAMESIZE_VGA;
-          } else if (num == 800600) {
-            configt.frame_size = FRAMESIZE_SVGA;
-          } else if (num == 1024768) {
-            configt.frame_size = FRAMESIZE_XGA;
-          } else if (num == 12801024) {
-            configt.frame_size = FRAMESIZE_SXGA;
-          } else if (num == 16001200) {
-            configt.frame_size = FRAMESIZE_UXGA;
-          }
-          configt.jpeg_quality = 5;
-          configt.fb_count = 2;
-          configt.fb_location = CAMERA_FB_IN_PSRAM;
-          configt.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-          esp_err_t errt = esp_camera_init(&configt);
-          if (errt != ESP_OK) {
-            Serial.printf("Camera init failed with error 0x%x", errt);
-            break;
-          }
+          cameraSetup(num);
         }
         bufVal = "";
         key = "";
@@ -248,40 +255,7 @@ void setup() {
 
   Serial.begin(115200);
   Serial.setDebugOutput(false);
-  camera_config_t config;
-  config.ledc_channel = LEDC_CHANNEL_0;
-  config.ledc_timer = LEDC_TIMER_0;
-  config.pin_d0 = Y2_GPIO_NUM;
-  config.pin_d1 = Y3_GPIO_NUM;
-  config.pin_d2 = Y4_GPIO_NUM;
-  config.pin_d3 = Y5_GPIO_NUM;
-  config.pin_d4 = Y6_GPIO_NUM;
-  config.pin_d5 = Y7_GPIO_NUM;
-  config.pin_d6 = Y8_GPIO_NUM;
-  config.pin_d7 = Y9_GPIO_NUM;
-  config.pin_xclk = XCLK_GPIO_NUM;
-  config.pin_pclk = PCLK_GPIO_NUM;
-  config.pin_vsync = VSYNC_GPIO_NUM;
-  config.pin_href = HREF_GPIO_NUM;
-  config.pin_sscb_sda = SIOD_GPIO_NUM;
-  config.pin_sscb_scl = SIOC_GPIO_NUM;
-  config.pin_pwdn = PWDN_GPIO_NUM;
-  config.pin_reset = RESET_GPIO_NUM;
-  config.xclk_freq_hz = 20000000;
-  config.pixel_format = PIXFORMAT_JPEG;
-  config.frame_size = FRAMESIZE_240X240;
-  config.jpeg_quality = 5;
-  config.fb_count = 2;
-  config.fb_location = CAMERA_FB_IN_PSRAM;
-  config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-
-  // Camera init
-  esp_err_t err = esp_camera_init(&config);
-
-  if (err != ESP_OK) {
-    Serial.printf("Camera init failed with error 0x%x", err);
-    return;
-  }
+  cameraSetup(240240);
   // Wi-Fi connection
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
