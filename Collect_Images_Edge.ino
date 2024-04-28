@@ -96,7 +96,7 @@ void cameraSetup(int resolution) {
     config.frame_size = FRAMESIZE_SXGA;
   } else if (resolution == 16001200) {
     config.frame_size = FRAMESIZE_UXGA;
-  }else{
+  } else {
     config.frame_size = FRAMESIZE_240X240;
   }
   config.jpeg_quality = 5;
@@ -106,10 +106,33 @@ void cameraSetup(int resolution) {
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
     Serial.printf("Camera init failed with error 0x%x", err);
-  }else{
+  } else {
     sensor_t *s = esp_camera_sensor_get();
     s->set_vflip(s, 1);
   }
+}
+
+void cameraSetting(String setting, int value) {
+  sensor_t *s = esp_camera_sensor_get();
+  if (setting == "bright") {
+    s->set_brightness(s, value);
+  }
+  if (setting == "contrast") {
+    s->set_contrast(s, value);
+  }
+  if (setting == "saturation") {
+    s->set_saturation(s, value);
+  }
+  if (setting == "ae") {
+    s->set_ae_level(s, value);
+  }
+  if (setting == "effect") {
+    s->set_special_effect(s, value);
+  }
+  if (setting == "mode") {
+    s->set_wb_mode(s, value);
+  }
+  s->set_vflip(s, 1);
 }
 static esp_err_t stream_handler(httpd_req_t *req) {
   camera_fb_t *fb = NULL;
@@ -174,7 +197,8 @@ static esp_err_t setting_handler(httpd_req_t *req) {
   char buffer[100];
   String bufVal = "";
   bool startCap = false;
-  String key = "";
+  String param = "";
+  int value = 0;
   Serial.println("setting handler accessed");
   if (httpd_req_get_url_query_str(req, buffer, sizeof(buffer)) == ESP_OK) {
     for (int i = 0; i < buffer[i] != '\0'; i++) {
@@ -185,39 +209,21 @@ static esp_err_t setting_handler(httpd_req_t *req) {
       if (startCap == true) {
         bufVal += buffer[i];
       } else {
-        key += buffer[i];
+        param += buffer[i];
       }
       if (buffer[i] == '&' || buffer[i + 1] == '\0') {
         startCap = false;
-        //Serial.println(key);
-        int num = bufVal.toInt();
-        sensor_t *s = esp_camera_sensor_get();
-        if (key == "bright") {
-          s->set_brightness(s, num);
-        }
-        if (key == "contrast") {
-          s->set_contrast(s, num);
-        }
-        if (key == "saturation") {
-          s->set_saturation(s, num);
-        }
-        if (key == "ae") {
-          s->set_ae_level(s, num);
-        }
-        if (key == "effect") {
-          s->set_special_effect(s, num);
-        }
-        if (key == "mode") {
-          s->set_wb_mode(s, num);
-        }
-        if (key == "resolution") {
-          esp_camera_deinit();
-          cameraSetup(num);
-        }
-        bufVal = "";
-        key = "";
+        value = bufVal.toInt();
       }
     }
+    if (param == "resolution") {
+      esp_camera_deinit();
+      cameraSetup(value);
+    } else {
+      cameraSetting(param, value);
+    }
+    //Serial.println(key);
+    //Serial.println(num);
   }
   const char *response = "setting changed sucessfully!";
   httpd_resp_send(req, response, strlen(response));
@@ -272,7 +278,6 @@ void setup() {
   // Start streaming web server
   startCameraServer();
 }
-
 void loop() {
   delay(1);
 }
