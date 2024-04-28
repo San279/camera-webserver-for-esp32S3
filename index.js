@@ -1,5 +1,4 @@
-
-var ipAdress = "***";
+var ipAdress = "http://192.168.1.30/";
 var classLabel = document.getElementById("class");
 var captureButton = document.getElementById("capture");
 var clearButton = document.getElementById("clear");
@@ -27,7 +26,6 @@ picture.onload = function () {
   resolution.selectedIndex = resMap.get(mapKey);
 }
 
-
 var inputInterval = document.getElementById('interval');
 inputInterval.value = 0.35;
 
@@ -35,33 +33,26 @@ var inputInstance = document.getElementById('instance');
 inputInstance.value = 30;
 
 var brightness = document.getElementById("brightness");
-brightness.value = 0;
 brightness.addEventListener("change", changeBrightness);
 
 var contrast = document.getElementById("contrast");
-contrast.value = 0;
 contrast.addEventListener("change", changeContrast);
 
 var saturation = document.getElementById("saturation");
-saturation.value = 0;
 saturation.addEventListener("change", changeSaturation);
 
 var ae = document.getElementById("ae");
-ae.value = 0;
 ae.addEventListener("change", changeAe);
 
 var effect = document.getElementById("effect");
-effect.value = 0;
 effect.addEventListener("change", changeEffect);
 
 var mode = document.getElementById("mode");
-mode.value = 0;
 mode.addEventListener("change", changeMode);
 
+resetAllSetting();
 document.getElementById("galleryImg").style.visibility = "hidden";
 document.getElementById('stop').style.visibility = 'hidden';
-
-
 
 async function displayCanvas(picIndex) {
   const displayCanvas = document.createElement("canvas");
@@ -151,65 +142,66 @@ function deleteButton(pictureId) {
   }
 }
 
-/*
-function checkSetting() {
-  var params;
-  console.log(brightness.value);
-  if (brightness.value.trim() !== "") {
-    console.log("not null");
+async function chageOtherSettings(setting) {
+  if (setting !== "bright") {
+    brightness.value = 0;
   }
-  if (brightness.value != 0) {
-    params = "bright=" + brightness.value;
+  if (setting !== "contrast") {
+    contrast.value = 0;
   }
-  else if (contrast.value != 0) {
-    params = "contrast=" + contrast.value;
+  if (setting !== "saturation") {
+    saturation.value = 0;
   }
-  else if (saturation.value != 0) {
-    params = "saturation=" + saturation.value;
+  if (setting !== "ae") {
+    ae.value = 0;
   }
-  else if (ae.value != 0) {
-    params = "ae=" + ae.value;
+  else if (setting !== "effect") {
+    effect.value = 0;
   }
-  else if (effect.value != 0) {
-    params = "effect=" + effect.value;
-  }
-  else if (mode.value != 0) {
-    params = "mode=" + mode.value;
-  }
-  return params;
 }
-*/
 
+function resetAllSetting(){
+  brightness.value = 0;
+  contrast.value = 0;
+  saturation.value = 0;
+  ae.value = 0;
+  effect.value = 0;
+  mode.value = 0;
+}
 
 async function changeBrightness() {
   var selectedBrightness = brightness.options[brightness.selectedIndex].value;
   var params = "bright=" + selectedBrightness
   await ChangeSetting(params);
-  //console.log(selectBrightness);
+  await chageOtherSettings("bright");
 }
 
 async function changeContrast() {
   var selectedContrast = contrast.options[contrast.selectedIndex].value;
   var params = "contrast=" + selectedContrast;
   await ChangeSetting(params);
+  await chageOtherSettings("contrast");
 }
 
 async function changeSaturation() {
   var selectedSaturation = contrast.options[saturation.selectedIndex].value;
   var params = "saturation=" + selectedSaturation;
   await ChangeSetting(params);
+  await chageOtherSettings("saturation");
 }
 
 async function changeAe() {
   var selectedAe = ae.options[ae.selectedIndex].value;
   var params = "ae=" + selectedAe;
   await ChangeSetting(params);
+  await chageOtherSettings("ae");
 }
 
 async function changeEffect() {
   var selectedEffect = effect.options[effect.selectedIndex].value;
   var params = "effect=" + selectedEffect;
   await ChangeSetting(params);
+  await chageOtherSettings("effect");
 }
 
 async function changeMode() {
@@ -222,6 +214,7 @@ async function changeResolution() {
   var selectedRes = resolution.options[resolution.selectedIndex].value;
   var params = "resolution=" + selectedRes;
   await ChangeSetting(params);
+  resetAllSetting();
 }
 
 captureButton.addEventListener("click", async function () {
@@ -275,35 +268,7 @@ async function ChangeSetting(params) {
       picture.setAttribute("src", ipAdress.toString());
     })
 }
-/*
-=======
 
->>>>>>> c995fa0effac44e195ec8d8b81a7614aa1637e07
-downloadButton.addEventListener("click", async function () {
-
-  if (galleryDict.size == 0) {
-    alert("No image found!!");
-    return;
-  }
-  var count = 0;
-  for (const value of galleryDict.values()) {
-    console.log(count);
-    count++;
-    var downloadLink = document.createElement("a");
-    downloadLink.href = value;
-    downloadLink.download = "image" + ".jpg"; // Specify the filename for download
-    
-    //img.src.substr(downloadLink);
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-    if (count > 9){
-      await new Promise(resolve => setTimeout(resolve,200));
-      count = 0;
-    }
-  }
-})
-*/
 downloadButton.addEventListener("click", async function () {
   var downloadLink = document.createElement("a");
   const zip = new JSZip();
@@ -329,7 +294,6 @@ downloadButton.addEventListener("click", async function () {
   downloadLink.remove();
   URL.revokeObjectURL(url);
 })
-
 
 function setResMap() {
   resMap.set("160120", 0);
