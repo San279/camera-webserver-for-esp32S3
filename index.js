@@ -276,6 +276,9 @@ async function ChangeSetting(params) {
     })
 }
 /*
+=======
+
+>>>>>>> c995fa0effac44e195ec8d8b81a7614aa1637e07
 downloadButton.addEventListener("click", async function () {
 
   if (galleryDict.size == 0) {
