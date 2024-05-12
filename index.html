@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="height: 100%; width: 1750px;background-color: #25274D;">
-  <div style="margin-left:44%; padding-top: 20px;">
+<body style="height: 100%; width: 100vw;;background-color: #348285;">
+  <br/>
+  <br/>
+  <div class = "class-container">
     <label for="className" class="class_label">Class: </label>
     <input type="text" id="class" name="className" class="class_input">
   </div>
-  <br />
-  <div class="img_container">
+  <div class="stream-container">
+    <img id="loading" class="loading" />
     <img id="stream" class="stream" crossorigin="anonymous" />
     <br />
     <label for="resolutionText" class="resolution_label">Resolution: </label>
@@ -30,52 +32,59 @@
       <option value="16001200">UXGA 1600X1200</option>
     </select>
   </div>
-  <div class="row">
-    <div class="column">
-      <button id="capture" class="capture" type="button">Capture</button>
-      <button id="stop" type="button" class="stop">Stop</button>
+  <br/>
+  <br/>
+  <br/>
+  </body>
+  <div class="console-container">
+    <div class="row">
+      <img id="stop" class="stop" src = "icons/stop_9503472.png">
+      <img id="capture" class="capture" src = "icons/camera_7369145.png">
+    </div>
+    <br/>
+    <div class = "row">
       <label for="intervalName" class="interval_label">Interval: </label>
       <input type="number" id="interval" class="interval" name="intervalName">
       <label for="instanceName" class="instance_label">Instance: </label>
       <input type="number" id="instance" class="instance" name="instanceName">
-      <br />
-      <br />
-      <label for="brightName" class="bright_label">Brightness: </label>
-      <select id="brightness" class="brightness" name="brightName">
+    </div>
+    <div class="row">
+      <label for="brightName" class="basic-setting-label">Brightness: </label>
+      <select id="brightness" class="basic-setting-input" name="brightName">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="contrastName" class="contrast_label">Contrast: </label>
-      <select id="contrast" class="contrast" name="contrastName">
+      <label for="contrastName" class="basic-setting-label">Contrast: </label>
+      <select id="contrast" class="basic-setting-input" name="contrastName">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="saturationName" class="saturation_label">Saturation: </label>
-      <select id="saturation" class="saturation" name="saturationName">
+      <label for="saturationName" class="basic-setting-label">Saturation: </label>
+      <select id="saturation" class="basic-setting-input" name="saturationName">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="aeName" class="ae_label">Ae Level: </label>
-      <select id="ae" class="ae" name="aeName">
+      <label for="aeName" class="basic-setting-label">Ae Level: </label>
+      <select id="ae" class="basic-setting-input" name="aeName">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <br />
-      <br />
-      <label for="effectName" class="effect_label">Effects: </label>
-      <select id="effect" class="effect" name="effectName">
+    </div>
+    <div class="row">
+      <label for="effectName" class="advance-setting-label">Effects: </label>
+      <select id="effect" class="advance-setting-input" name="effectName">
         <option value="0">No Effect</option>
         <option value="1">Negative</option>
         <option value="2">Grayscale</option>
@@ -84,22 +93,19 @@
         <option value="5">Blue Tint</option>
         <option value="6">Sepia</option>
       </select>
-      <label for="modeName" class="mode_label">Mode: </label>
-      <select id="mode" class="mode" name="modeName">
+      <label for="modeName" class="advance-setting-label">Mode: </label>
+      <select id="mode" class="advance-setting-input" name="modeName">
         <option value="0">Auto</option>
         <option value="1">Sunny</option>
         <option value="2">Cloudy</option>
         <option value="3">Office</option>
         <option value="4">Home</option>
       </select>
-      <button id="changeSetting" class="change">Change</button>
-      <br />
-      <br />
-      <button id="download" class="download">Download</button>
-      <button id="clear" type="button" class="clear">Clear</button>
-
     </div>
-    <div>
+    <div class="row">
+      <img id="download" class="download" src = "icons/document_5425860.png">
+      <input type="number" id="image_no" class="image-no">
+      <img id="clear" class="clear" src = "icons/document_5425848.png">
     </div>
   </div>
   <br />

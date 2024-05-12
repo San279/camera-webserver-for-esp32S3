@@ -1,224 +1,196 @@
+.class-container{
+    display: flex;
+    justify-content: center;
+}
+
 .class_label{
     color: bisque;
     font: 15px;
+    padding-right: 10px;
+}
+.class_input{
+    width: 120px;
+    border:none;
+    height: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 5px;
 }
 
-.stream_container{
-    padding: 20px;
+.stream-container{
+    padding: 15px;
 }
+
+.loading {
+    display: block;
+    margin: auto;
+    pointer-events: none;
+    margin-bottom: -100px;
+}
+
 .stream{
     display: block;
     -webkit-user-select: none;
     margin: auto;
     border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .resolution_label{
-    margin-left:44%; 
+    margin-left: 45%;
     color: bisque
 }
 
-.resolution{
-    border:none; color:bisque; 
-    background-color:#424242 ;
+.resolution {
+    border: none;
+    color: bisque;
+    border-radius: 6px;
+    background-color: #2b9585;
+    padding: 3px;
 }
 
-.row{
-    display:flex; 
+.console-container {
     margin-top: 50px;
     border-radius: 4px;
     padding: 20px;
-    margin-left: 33.5%;
-    background-color: #464866;
+    width: 200px;
+    margin: auto;
+    background-color: #2b9585;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 30%;
-    border-color:black;
+    height: 300px;
+    border-color: black;
 }
 
-.column{
-    flex:80%;
+.row {
+    display:flex;
+    justify-content: center;
+    padding:10px;
 }
-
-.capture{
-    background-color: lightgreen; 
-    color: green; 
-    width: 20%;
-    padding-right: 300px; 
-    border-color: green; 
-    border-radius: 6px; 
-    padding: 12px; 
-    font-size: 14px;
-    pointer-events: auto;
-    border-width: thin;
-}
-
-.stop{
-    margin-left: -18%;
-    width:20%;
-    background-color: lightcoral; 
-    color: darkred; 
-    border-color: darkred; 
-    border-radius: 50%; 
-    width:63px;
-    height:63px;
-    font-size: 14px;
-    pointer-events: auto;
-    border-width: thin;
-}
-
-
-.clear{
-    margin-left:50px;
-    background-color: lightcoral; 
-    color: darkred; 
-    border-color: darkred; 
-    border-radius:50%; 
-    width: 60px;
+.stop {
     height: 60px;
-    font-size: 14px;
-    pointer-events: auto;
-    border-width: thin;
+    width: 60px;
+    cursor: pointer;
+}
+
+.stop:hover{
+    height: 68px;
+    width: 68px;
+}
+.capture{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.capture:hover{
+    height: 75px;
+    width: 75px;
 }
 
 .interval_label{ 
-    margin-left: 45px;
     color:bisque; 
     font-size: 18px
 }
 
 .interval{
-    width: 55px; 
-    border-radius: 6px; 
-    font-size:14px; 
+    width: 55px;
+    border:none;
+    height: 20px;
+    border-radius: 6px;
+    font-size: 14px;
     padding: 5px;
 }
 
 .instance_label{
-    padding-left: 20px; 
-    color:bisque; 
+    color: bisque;
+    padding: 5px;
     font-size: 18px
 }
 
 .instance{
-    width: 55px; 
-    border-radius: 6px; 
-    font-size:14px; 
-    padding: 5px;
-}
-
-.bright_label{
-    color:bisque; 
-    font-size: 15px;
-}
-
-.brightness{
-    width: 48px; 
+    width: 55px;
+    border:none;
+    height: 20px;
     border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.contrast_label{
-    color:bisque; 
-    font-size: 15px;
-}
-
-.contrast{
-    width: 48px; 
-    border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.saturation_label{
-    color:bisque; 
-    font-size: 15px;
-}
-
-.saturation{
-    width: 48px; 
-    border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.ae_label{
-    color:bisque; 
-    font-size: 15px;
-}
-
-.ae{
-    width: 48px; 
-    border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.effect_label{
-    color:bisque; 
-    font-size: 15px;
-}
-
-.effect{
-    width: 130px; 
-    border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.mode_label{
-    padding-left: 2%;
-    color:bisque; 
-    font-size: 15px;
-}
-
-.mode{
-    width: 130px; 
-    border-radius: 6px;
-    border: none; 
-    font-size:13px; 
-    padding: 5px;
-}
-
-.change{
-    margin-left: 5%;
-    width: 20%;
-    background-color: lightskyblue; 
-    color: darkblue; 
-    border-color: darkblue; 
-    border-radius: 5px; 
-    padding: 8px; 
     font-size: 14px;
-    pointer-events: auto;
-    border-width: thin;
+    padding: 5px;
 }
-.download{
-    margin-top: "50px";
-    width: 20%;
-    background-color: lightskyblue; 
-    color: darkblue; 
-    border-color: darkblue; 
-    border-radius: 5px; 
-    padding: 12px; 
-    font-size: 14px;
-    pointer-events: auto;
-    border-width: thin;
+
+.basic-setting-label{
+    color: bisque;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.basic-setting-input{
+    width: 48px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.advance-setting-label{
+    color: bisque;
+    font-size: 15px;
+    padding: 7px;
+}
+
+.advance-setting-input{
+    width: 130px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.download {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;;
+}
+
+.download:hover{
+    width: 55px;
+    height: 55px;
+}
+.image-no{
+    cursor: none;
+    border: none;
+    background-color:transparent;
+    padding-top: 15px;
+    color: bisque;
+    font-size: 15px;
+    width: 40px;
+    height: 30px;
+    pointer-events: none;
+}
+
+.clear {
+    margin-left: 80%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.clear:hover{
+    width: 55px;
+    height: 55px;
 }
 
 .galleryImg{
-    padding: 25px; 
-    background-color: #29648A; 
+    padding: 25px;
+    background-color: #349489;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-radius: 6px;
-    border-color: #29648A;
-     border-top-style:double;
-      border-width: 10px; 
-      display:flex; 
-      flex-wrap: wrap; 
-      width: 1770px;
+    border-width: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1770px;
 }
 
 .savedImg{

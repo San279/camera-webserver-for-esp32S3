@@ -1,4 +1,3 @@
-var ipAdress = "http://192.168.1.30/";
 var classLabel = document.getElementById("class");
 var captureButton = document.getElementById("capture");
 var clearButton = document.getElementById("clear");
@@ -7,24 +6,74 @@ var brightness = document.getElementById("brightness");
 var stopButton = document.getElementById("stop");
 var downloadButton = document.getElementById("download");
 var picture = document.getElementById("stream");
+var loadingIcon = document.getElementById("loading");
 
 var resolution = document.getElementById("resolution");
 resolution.addEventListener("change", changeResolution);
 
 var resMap = new Map();
 setResMap();
-picture.setAttribute("src", ipAdress.toString());
 var width = 0;
 var height = 0;
 var state = 0;
 var galleryDict = new Map();
 let index = 0;
+
+
+async function getInputAddress() {
+  let previoushttpRequest = localStorage.getItem('ipAddress');
+  let streamState = localStorage.getItem('streamState');
+  if (streamState !== '1') {
+    var inputAddress = prompt('ip address from arduino');
+    var convertedHttpReq = "http://" + inputAddress + "/";
+    localStorage.setItem('ipAddress', convertedHttpReq);
+    return convertedHttpReq;
+  }
+  return previoushttpRequest;
+}
+
+function checkStream(url) {
+  showLoadingIcon();
+  picture.src = url;
+  return new Promise((resolve) => {
+    picture.onload = () => {
+      width = picture.clientWidth;
+      height = picture.clientHeight;
+      displayPictureRes(width, height);
+      localStorage.setItem('streamState', '1');
+      resolve(true);
+    };
+    picture.onerror = () => {
+      alert("check if the ip address is valid or if CORS is enabled")
+      localStorage.setItem('streamState', '0');
+      resolve(false);
+    }
+  }
+  );
+}
+
+/*
 picture.onload = function () {
   width = picture.clientWidth;
   height = picture.clientHeight;
   var mapKey = width.toString() + height.toString();
   resolution.selectedIndex = resMap.get(mapKey);
 }
+*/
+
+async function fetchStream() {
+  for (let i = 0; i < 5; i++) {
+    const inputAddress = await getInputAddress();
+    await checkStream(inputAddress).then(console.log);
+    await new Promise(resolve => setTimeout(resolve, 200));
+    let streamState = localStorage.getItem('streamState');
+    if (streamState == '1') {
+      removeLoadingIcon();
+      break;
+    }
+  }
+}
+fetchStream();
 
 var inputInterval = document.getElementById('interval');
 inputInterval.value = 0.35;
@@ -50,9 +99,18 @@ effect.addEventListener("change", changeEffect);
 var mode = document.getElementById("mode");
 mode.addEventListener("change", changeMode);
 
+var imageNo = document.getElementById("image_no");
+imageNo.style.visibility = "hidden";
+
 resetAllSetting();
+updateImageNo();
 document.getElementById("galleryImg").style.visibility = "hidden";
 document.getElementById('stop').style.visibility = 'hidden';
+
+async function stopStream() {
+  picture.removeAttribute("src");
+  await new Promise(resolve => setTimeout(resolve, 1000));
+}
 
 async function displayCanvas(picIndex) {
   const displayCanvas = document.createElement("canvas");
@@ -92,6 +150,8 @@ function createDeleteButton(picIndex) {
   deleteButton.style.border = "none";
   deleteButton.style.borderRadius = "50%";
   deleteButton.style.backgroundColor = "red";
+  deleteButton.style.color = "bisque";
+  deleteButton.style.cursor = "pointer";
   deleteButton.innerText = "-";
   deleteButton.setAttribute("onclick", "deleteButton(this.id)");
   return deleteButton;
@@ -106,6 +166,8 @@ async function savePicture(picIndex) {
   hiddenCanvas.getContext('2d').drawImage(picture, 0, 0, width, height);
   let image_data_url = hiddenCanvas.toDataURL('image' + index - 1 + '/jpg');
   galleryDict.set("saved" + picIndex, image_data_url);
+  imageNo.style.visibility = "visible";
+  await updateImageNo();
 }
 
 function getInterval() {
@@ -137,7 +199,9 @@ function getInstance() {
 function deleteButton(pictureId) {
   document.getElementById("imgDiv" + pictureId).remove();
   galleryDict.delete("saved" + pictureId);
+  updateImageNo();
   if (galleryDict.size == 0) {
+    imageNo.style.visibility = "hidden";
     document.getElementById("galleryImg").style.visibility = "hidden";
   }
 }
@@ -244,6 +308,8 @@ clearButton.addEventListener("click", function () {
   }
 
   galleryDict.clear();
+  updateImageNo();
+  imageNo.style.visibility = "hidden";
   document.getElementById("galleryImg").style.visibility = "hidden";
 })
 
@@ -255,8 +321,9 @@ stopButton.addEventListener("click", async function () {
 })
 
 async function ChangeSetting(params) {
-  picture.removeAttribute("src");
-  fetch(ipAdress + 'setting?' + params)
+  await stopStream();
+  let previoushttpRequest = localStorage.getItem('ipAddress');
+  fetch(previoushttpRequest + 'setting?' + params)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -265,7 +332,7 @@ async function ChangeSetting(params) {
     })
     .then(data => {
       console.log(data);
-      picture.setAttribute("src", ipAdress.toString());
+      fetchStream();
     })
 }
 
@@ -295,6 +362,10 @@ downloadButton.addEventListener("click", async function () {
   URL.revokeObjectURL(url);
 })
 
+async function updateImageNo (){
+  imageNo.value = galleryDict.size;
+}
+
 function setResMap() {
   resMap.set("160120", 0);
   resMap.set("240240", 1);
@@ -306,6 +377,22 @@ function setResMap() {
   resMap.set("16001200", 7);
 }
 
+function displayPictureRes(picWidth, picHeight) {
+  width = picWidth;
+  height = picHeight;
+  var mapKey = width.toString() + height.toString();
+  resolution.selectedIndex = resMap.get(mapKey);
+}
 
+function showLoadingIcon(){
+  loadingIcon.src = "./loading.gif";
+  loadingIcon.setAttribute("width", "120");
+  loadingIcon.setAttribute("height", "120");
+  loadingIcon.style.visibility = "visible";
+}
 
+function removeLoadingIcon(){
+  loadingIcon.removeAttribute('src');
+  loadingIcon.style.visibility = 'hidden';
+}
 
