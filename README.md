@@ -16,7 +16,7 @@ This project was intended to use for collecting images from Esp32S3 to train FOM
 ## How to Install and run the project
 
 1. Download the project and placed it inside Arduino Directory on your PC
-![Download the project and placed it inside Arduino Directory on your PC](/images_for_readme/folder_directory.png)
+![Download the project and placed it inside Arduino Directory on your PC](/images_for_readme/folder_directory.PNG)
 3. Open Collect_Images_Edge.ino and edit your WIFI SSID and PASSWORD.
 4. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".
 5. Upload the code to your ESP32S3 and copy the IP address.
