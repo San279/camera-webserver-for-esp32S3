@@ -1,6 +1,9 @@
 # Esp32 image collection webserver for Edge Impulse
 This project was intended to use for collecting images from Esp32S3 to train FOMO object detection model in Edge Impulse. Instead of saving images to the SD card like most Esp32 webserver projects, users can inspect each image from the camera and delete at will. Furthermore, users can manipulate Esp32S3 camera resolutions and sensors settings. Just download the files and place it inside the Arduino directory and you're good to go! 
 
+## What you'll need
+- Arduino IDE, preferably the latest ones, but older versions will still do the job. 
+
 ## Project files descriptions
 
 1. Collect_Images_Edge.ino - Containes Arduino codes for streaming camera images to the webserver.
