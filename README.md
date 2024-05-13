@@ -15,24 +15,24 @@ This project was intended to use for collecting images from Esp32S3 to train FOM
 
 ## How to Install and run the project
 
-1. Download the project and placed it inside Arduino Directory on your PC <br />
+1. Download the project and placed it inside Arduino Directory on your PC <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
-<br /><br />
-2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br />
+<br /><br /><br /><br />
+2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
 ![alt text](/Images_for_readme/ssidPassword.PNG)
-<br /><br />
-3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br />
-![alt text](/Images_for_readme/IDE Configure.PNG)
-<br /><br />
-4. Upload the code to your ESP32S3 and copy the IP address. <br />
-![alt text](/Images_for_readme/ipAddressIDE.PNG)
-<br /><br />
-5. Enable CORS extension in your default browser.<br />
+<br /><br /><br /><br />
+3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br /><br />
+![alt text](/Images_for_readme/IDE_configure.PNG)
+<br /><br /><br /><br />
+4. Upload the code to your ESP32S3 and copy the IP address. <br /><br />
+![alt text](/Images_for_readme/ip_IDE.PNG)
+<br /><br /><br /><br />
+5. Enable CORS extension in your default browser.<br /><br />
 ![alt text](/Images_for_readme/CORS.PNG)
-<br /><br />
-6. Open index.html file, it should open your default browser and ask for the IP Address, paste it there.<br />
-![alt text](/Images_for_readme/ipAddressPrompt.PNG)
-<br /><br />
+<br /><br /><br /><br />
+6. Open index.html file, it should open your default browser and ask for the IP Address, paste it there.<br /><br />
+![alt text](/Images_for_readme/ip_prompt.PNG)
+<br /><br /><br /><br />
 
 
 ## Webserver features
