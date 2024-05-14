@@ -1,8 +1,8 @@
 # Esp32 image collection webserver for Edge Impulse
-This project was intended to use for collecting images from Esp32S3 to train FOMO object detection model in Edge Impulse. Instead of saving images to the SD card like most Esp32 webserver projects, users can inspect each image from the camera and deleted it. Furthermore, users can manipulate Esp32S3 camera resolutions and sensors settings. Just download the files and place it inside the Arduino directory and you're good to go! 
+This project was intended to use for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse][https://edgeimpulse.com/]. Instead of saving images to the SD card like most Esp32 webserver projects, users can inspect each image from the camera and deleted it. Furthermore, users can manipulate Esp32S3 camera resolutions and sensors settings. Just download the files and place it inside the Arduino directory and you're good to go! 
 
 ## What you'll need
-- Arduino IDE, preferably the latest ones, but older versions will still do the job.
+- [Arduino IDE](https://www.arduino.cc/en/software), preferably the latest ones, but older versions will still do the job.
 - [CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en) web extensions for your targeted browser.
 
 ## Project files descriptions
@@ -70,4 +70,4 @@ This project was intended to use for collecting images from Esp32S3 to train FOM
 ![alt_text](/Images_for_readme/clear.PNG)
 <br /> <br /><br /> <br />
   ## Credit
-  This project was aimed to be used with WARP AIOT BOARD under WIRELESS SOLUTION ASIA CO.,LTD as an extension to Edge Impulse for the ESP32 microcontroller. Thanks to 
+  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an extension to Edge Impulse for the ESP32 microcontroller. This project was inspired by ESP32 Webserver
