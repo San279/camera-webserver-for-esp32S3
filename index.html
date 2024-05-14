@@ -5,23 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Website</title>
+  <title>Image Collection</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="height: 100%; width: 100vw;;background-color: #348285;">
+<body style="height: 100%; width: 100vw;background-color: #348285; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
   <br/>
+  <div class = "language-container">
+    <text id = "englishSelect" class = "english">English</text>
+    <text style = "font-size: 15px; color: bisque;">&nbsp&nbsp| &nbsp&nbsp</text>
+    <text id = "thaiSelect" class = "thai">ไทย</text>
+  </div>
   <br/>
   <div class = "class-container">
-    <label for="className" class="class_label">Class: </label>
+    <text id="classLabel" class="class_label"></text>
     <input type="text" id="class" name="className" class="class_input">
   </div>
   <div class="stream-container">
     <img id="loading" class="loading" />
     <img id="stream" class="stream" crossorigin="anonymous" />
     <br />
-    <label for="resolutionText" class="resolution_label">Resolution: </label>
-    <select id="resolution" class="resolution" name="resolutionTxt">
+    <select id="resolution" class="resolution">
       <option value="160120">QQVGA 160X120</option>
       <option value="240240">240X240</option>
       <option value="320240">QVGA 320X240</option>
@@ -43,38 +47,40 @@
     </div>
     <br/>
     <div class = "row">
-      <label for="intervalName" class="interval_label">Interval: </label>
-      <input type="number" id="interval" class="interval" name="intervalName">
-      <label for="instanceName" class="instance_label">Instance: </label>
-      <input type="number" id="instance" class="instance" name="instanceName">
+      <text id = "intervalLabel" class="interval_label"></text>
+      <input type="number" id="interval" class="interval">
+      &nbsp&nbsp
+      <text id ="instanceLabel" class="instance_label"></text>
+      <input type="number" id="instance" class="instance">
     </div>
     <div class="row">
-      <label for="brightName" class="basic-setting-label">Brightness: </label>
-      <select id="brightness" class="basic-setting-input" name="brightName">
+      <text id = "brightLabel" class="basic-setting-label"></text>
+      <select id="brightness" class="basic-setting-input">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="contrastName" class="basic-setting-label">Contrast: </label>
-      <select id="contrast" class="basic-setting-input" name="contrastName">
+      <text id ="contrastLabel" class="basic-setting-label"></text>
+      <select id="contrast" class="basic-setting-input">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="saturationName" class="basic-setting-label">Saturation: </label>
-      <select id="saturation" class="basic-setting-input" name="saturationName">
+      &nbsp
+      <text id ="saturationLabel" class="basic-setting-label"></text>
+      <select id="saturation" class="basic-setting-input">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
-      <label for="aeName" class="basic-setting-label">Ae Level: </label>
-      <select id="ae" class="basic-setting-input" name="aeName">
+      <text id ="aeLabel" class="basic-setting-label"></text>
+      <select id="ae" class="basic-setting-input">
         <option value="-2">-2</option>
         <option value="-1">-1</option>
         <option value="0">0</option>
@@ -83,8 +89,8 @@
       </select>
     </div>
     <div class="row">
-      <label for="effectName" class="advance-setting-label">Effects: </label>
-      <select id="effect" class="advance-setting-input" name="effectName">
+      <text id ="effectLabel" class="advance-setting-label"></text>
+      <select id="effect" class="advance-setting-input">
         <option value="0">No Effect</option>
         <option value="1">Negative</option>
         <option value="2">Grayscale</option>
@@ -93,8 +99,9 @@
         <option value="5">Blue Tint</option>
         <option value="6">Sepia</option>
       </select>
-      <label for="modeName" class="advance-setting-label">Mode: </label>
-      <select id="mode" class="advance-setting-input" name="modeName">
+      &nbsp
+      <text id ="modeLabel" class="advance-setting-label"></text>
+      <select id="mode" class="advance-setting-input">
         <option value="0">Auto</option>
         <option value="1">Sunny</option>
         <option value="2">Cloudy</option>

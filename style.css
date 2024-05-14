@@ -1,3 +1,20 @@
+.language-container{
+    display:flex;
+    justify-content: center;
+}
+
+.english{
+    color: bisque;
+    font: 15px;
+    cursor: pointer;
+    margin-left: 90%;
+}
+
+.thai{
+    color: bisque;
+    font: 15px;
+    cursor: pointer;
+}
 .class-container{
     display: flex;
     justify-content: center;
@@ -18,7 +35,7 @@
 }
 
 .stream-container{
-    padding: 15px;
+    padding: 1px;
 }
 
 .loading {
@@ -36,14 +53,11 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.resolution_label{
-    margin-left: 45%;
-    color: bisque
-}
 
 .resolution {
     border: none;
     color: bisque;
+    margin-left: 46.7%;
     border-radius: 6px;
     background-color: #2b9585;
     padding: 3px;
@@ -57,7 +71,7 @@
     margin: auto;
     background-color: #2b9585;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 30%;
+    width: 40%;
     height: 300px;
     border-color: black;
 }
@@ -65,9 +79,10 @@
 .row {
     display:flex;
     justify-content: center;
-    padding:10px;
+    padding: 10px;
 }
 .stop {
+    margin-left: 3%;
     height: 60px;
     width: 60px;
     cursor: pointer;
@@ -78,6 +93,7 @@
     width: 68px;
 }
 .capture{
+    margin-left: 1%;
     position: absolute;
     height: 60px;
     width: 60px;
@@ -91,26 +107,27 @@
 
 .interval_label{ 
     color:bisque; 
-    font-size: 18px
+    padding: 5px;
+    font-size: 17px;
 }
 
 .interval{
-    width: 55px;
+    width: 50px;
     border:none;
     height: 20px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 12spx;
     padding: 5px;
 }
 
 .instance_label{
     color: bisque;
     padding: 5px;
-    font-size: 18px
+    font-size: 17px;
 }
 
 .instance{
-    width: 55px;
+    width: 50px;
     border:none;
     height: 20px;
     border-radius: 6px;
@@ -129,18 +146,17 @@
     border-radius: 6px;
     border: none;
     font-size: 13px;
-    padding-right: 15px;
     cursor: pointer;
 }
 
 .advance-setting-label{
     color: bisque;
     font-size: 15px;
-    padding: 7px;
+    padding: 5px;
 }
 
 .advance-setting-input{
-    width: 130px;
+    width: 100px;
     border-radius: 6px;
     border: none;
     font-size: 13px;
@@ -171,7 +187,7 @@
 }
 
 .clear {
-    margin-left: 80%;
+    margin-left: 83%;
     width: 40px;
     height: 40px;
     cursor: pointer;

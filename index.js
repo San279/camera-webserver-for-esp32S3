@@ -224,7 +224,7 @@ async function chageOtherSettings(setting) {
   }
 }
 
-function resetAllSetting(){
+function resetAllSetting() {
   brightness.value = 0;
   contrast.value = 0;
   saturation.value = 0;
@@ -345,12 +345,12 @@ downloadButton.addEventListener("click", async function () {
   }
   var count = 0;
   for (const value of galleryDict.values()) {
-   let data = value.substr(value.indexOf(",") + 1)
-   count++;
-   zip.file(classLabel.value.toString() + count + ".jpg", data, {base64: true})
+    let data = value.substr(value.indexOf(",") + 1)
+    count++;
+    zip.file(classLabel.value.toString() + count + ".jpg", data, { base64: true })
   }
 
-  const zipFile = await zip.generateAsync({type: 'blob'});
+  const zipFile = await zip.generateAsync({ type: 'blob' });
   downloadLink.download = "images_of_" + classLabel.value + '.zip';
 
   const url = URL.createObjectURL(zipFile);
@@ -362,7 +362,7 @@ downloadButton.addEventListener("click", async function () {
   URL.revokeObjectURL(url);
 })
 
-async function updateImageNo (){
+async function updateImageNo() {
   imageNo.value = galleryDict.size;
 }
 
@@ -384,15 +384,111 @@ function displayPictureRes(picWidth, picHeight) {
   resolution.selectedIndex = resMap.get(mapKey);
 }
 
-function showLoadingIcon(){
+function showLoadingIcon() {
   loadingIcon.src = "./loading.gif";
   loadingIcon.setAttribute("width", "120");
   loadingIcon.setAttribute("height", "120");
   loadingIcon.style.visibility = "visible";
 }
 
-function removeLoadingIcon(){
+function removeLoadingIcon() {
   loadingIcon.removeAttribute('src');
   loadingIcon.style.visibility = 'hidden';
 }
 
+var classLabel = document.getElementById("classLabel")
+var intervalLabel = document.getElementById("intervalLabel");
+var instanceLabel = document.getElementById("instanceLabel");
+var brightLabel = document.getElementById("brightLabel");
+var contrastLabel = document.getElementById("contrastLabel");
+var saturationLabel = document.getElementById("saturationLabel");
+var aeLabel = document.getElementById("aeLabel");
+var effectLabel = document.getElementById("effectLabel");
+var modeLabel = document.getElementById("modeLabel");
+
+const en =
+{
+  "class": "Class",
+  "interval": "Interval",
+  "instances": "Instances",
+  "brightness": "Brightness",
+  "contrast": "Contrast",
+  "saturation": "Saturation",
+  "ae_level": "AE level",
+  "effects": "Effect",
+  "mode": "Mode"
+}
+
+
+const th =
+{
+  "class": "หมวด",
+  "interval": "เวลาระหว่างการบันทึกรูป",
+  "instances": "จำนวนรูป",
+  "brightness": "ความสว่าง",
+  "contrast": "ความต่างระดับสี",
+  "saturation": "ความอิ่มสี",
+  "ae_level": "การเปิดรับแสง",
+  "effects": "เอฟเฟคกล้อง",
+  "mode": "โหมดกล้อง"
+}
+
+function changeLanguage() {
+
+  classLabel.innerHTML = th.class;
+  intervalLabel.innerHTML = th.interval;
+  instanceLabel.innerHTML = th.instances;
+  brightLabel.innerHTML = th.brightness;
+  contrastLabel.innerHTML = th.contrast;
+  saturationLabel.innerHTML = th.saturation;
+  aeLabel.innerHTML = th.ae_level;
+  effectLabel.innerHTML = th.effects;
+  modeLabel.innerText = th.mode;
+}
+var englishSelect = document.getElementById("englishSelect");
+var thaiSelect = document.getElementById("thaiSelect");
+
+function getLanguage(){
+  var getLang = localStorage.getItem("lang");
+  if (getLang == "en"){
+    englishSelect.click();
+  }
+  else if(getLang = "th"){
+    thaiSelect.click();
+  }
+  else{
+    englishSelect.click();
+  }
+}
+
+englishSelect.addEventListener("click", function () {
+  thaiSelect.style.color = "bisque";
+  englishSelect.style.color = "blue";
+  classLabel.innerHTML = en.class;
+  intervalLabel.innerHTML = en.interval;
+  instanceLabel.innerHTML = en.instances;
+  brightLabel.innerHTML = en.brightness;
+  contrastLabel.innerHTML = en.contrast;
+  saturationLabel.innerHTML = en.saturation;
+  aeLabel.innerHTML = en.ae_level;
+  effectLabel.innerHTML = en.effects;
+  modeLabel.innerText = en.mode;
+  localStorage.setItem("lang", "en");
+})
+
+thaiSelect.addEventListener("click", function () {
+  thaiSelect.style.color = "blue";
+  englishSelect.style.color = "bisque";
+  classLabel.innerHTML = th.class;
+  intervalLabel.innerHTML = th.interval;
+  instanceLabel.innerHTML = th.instances;
+  brightLabel.innerHTML = th.brightness;
+  contrastLabel.innerHTML = th.contrast;
+  saturationLabel.innerHTML = th.saturation;
+  aeLabel.innerHTML = th.ae_level;
+  effectLabel.innerHTML = th.effects;
+  modeLabel.innerText = th.mode;
+  localStorage.setItem("lang", "th");
+})
+
+getLanguage();
