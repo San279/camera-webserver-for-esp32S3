@@ -70,4 +70,4 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 ![alt_text](/Images_for_readme/clear.PNG)
 <br /> <br /><br /> <br />
   ## Credit
-  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an extension to Edge Impulse for the ESP32 microcontroller. This project was inspired by ESP32 Webserver
+  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an extension to Edge Impulse for the ESP32 microcontroller. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
