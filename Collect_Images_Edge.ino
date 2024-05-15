@@ -118,14 +118,54 @@ void cameraSetting(String setting, int value) {
   if (setting == "saturation") {
     s->set_saturation(s, value);
   }
+    if (setting == "sharpness"){
+    s->set_sharpness(s, value);
+  }
+  if (setting == "effect") {
+    s->set_special_effect(s, value); 
+  }
+  if (setting == "whiteball") {
+    s->set_whitebal(s, value);
+  }
+  if (setting == "awb") {
+    s->set_awb_gain(s, value);
+  }
+  if (setting == "mode") {
+    s->set_awb_gain(s, 1);
+    s->set_wb_mode(s, value);
+  }
+  if (setting == "exposure"){
+    s->set_exposure_ctr(s,value);
+  }
+  if (setting == "aec2"){
+    s->set_aec2(s, value);
+  }
   if (setting == "ae") {
     s->set_ae_level(s, value);
   }
-  if (setting == "effect") {
-    s->set_special_effect(s, value);
+  if (setting == "aec"){
+    s->set_aec_value(s, value);
   }
-  if (setting == "mode") {
-    s->set_wb_mode(s, value);
+  if (setting == "gain"){
+    s->set_gain_ctrl(s, value);
+  }
+  if (setting == "agc"){
+    s->set_agc_gain(s, value);
+  }
+  if (setting == "gainCeiling"){
+    s->set_gainceiling(s, (gainceiling_t)value);
+  }
+  if (setting == "bpc"){
+    s->set_bpc(s, value);
+  }
+  if (setting == "wpc"){
+    s->set_wpc(s, value);
+  }
+  if (setting == "rawGma"){
+    s->set_raw_gma(s, value);
+  }
+  if (setting == "lenC"){
+    s->set_lenc(s, value);
   }
   s->set_vflip(s, 1);
 }
