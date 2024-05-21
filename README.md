@@ -18,7 +18,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 1. Enable CORS extension in your default browser.<br /><br />
 ![alt text](/Images_for_readme/CORS.PNG)
 <br /><br /><br /><br />
-2. Download the project and placed it inside Arduino Directory on your PC. <br /><br />
+2. Download the project and unzip it to your Arduino Directory on your PC. <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
 3. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
