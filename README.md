@@ -37,24 +37,25 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 ![alt text](/Images_for_readme/done.PNG)<br /><br />
 <br /><br /><br /><br />
 ## Webserver features
-- There are only two avaiable languages avaiable for now, can be switched on the top right of the web.
-<br /><br /><br />
+- User can switch languages on the top right corner of the web.
+<br />
 - Adjustable Camera Settings, to see more details about each setting does please visit [https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0) <br /><br />
-- User can minimize the setting console by clicking on the setting icon above.<br /><br />
+- User can hide the setting console by clicking on the setting icon above.<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
 - Adjustable Resolutions. <br />
-- Class labels will give each images a name when downloaded, suitable for organizing data collections.<br /><br />
+- Class labels will give each images an assigned name when downloaded, suitable for labeling images or organizing data collections.<br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
 - Capture button will start capturing images from stream and display it in the gallery below. <br />
-- Set Interval for each capture, the webserver will capture images interval according to the given value. The interval cannot be less than 0.1.  <br />
-- Set Instances for capture or the amount of images to capture.<br /> <br />
+- The webserver can capture each images in an interval according to the given value from user. The interval cannot be less than 0.1.  <br />
+- Set Instances to limit the amount of images captured.<br /> <br />
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
 - Download button located on top right of the gallery will zip all captured images into one file and download.<br />
 - Clear buttons located on top left of the gallery will delete all captured images in the gallery.<br /> <br />
+- User can delete each images in the gallery individually.<br /> <br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
   ## Credit
-  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an extension to Edge Impulse for the ESP32 microcontroller. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
+  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an tool for data collection of the ESP32-S3. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
