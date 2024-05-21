@@ -53,8 +53,8 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
 - Download button located on the top left will zip all captured images into a single file and download.<br />
-- Clear buttons located on the top right corner will delete all captured images.<br />
-- User can delete each images in the gallery individually.<br /><br />
+- Clear buttons located on the top right will delete all captured images.<br />
+- User can aslo delete each image individually.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
 ## Credit
