@@ -15,7 +15,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 
 ## How to Install and run the project
 
-1. Download the project and placed it inside Arduino Directory on your PC <br /><br />
+1. Download the project and placed it inside Arduino Directory on your PC. <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
 2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
@@ -37,8 +37,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 ![alt text](/Images_for_readme/done.PNG)<br /><br />
 <br /><br /><br /><br />
 ## Webserver features
-- User can switch languages on the top right corner of the web.
-<br />
+- User can switch languages on the top right corner of the web.<br />
 - Adjustable Camera Settings, to see more details about each setting does please visit.<br />
 - User can hide the setting console by clicking on the setting icon above.<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
