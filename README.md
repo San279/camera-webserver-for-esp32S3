@@ -57,5 +57,5 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 - User can delete each images in the gallery individually.<br /> <br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
-  ## Credit
-  This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an tool for data collection of the ESP32-S3. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
+## Credit
+This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an tool for data collection of the ESP32-S3. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
