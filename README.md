@@ -40,10 +40,11 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 - There are only two avaiable languages avaiable for now, can be switched on the top right of the web.
 <br /><br /><br />
 - Adjustable Camera Settings, to see more details about each setting does please visit [https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0) <br /><br />
+- User can minimize the setting console by clicking on the setting icon above.<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
-- Adjustable Resolutions. <br /><br />
-- Class labels will give each images a name when downloaded, suitable for organizing data collections.
+- Adjustable Resolutions. <br />
+- Class labels will give each images a name when downloaded, suitable for organizing data collections.<br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
 - Capture button will start capturing images from stream and display it in the gallery below. <br />
