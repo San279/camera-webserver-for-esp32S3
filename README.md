@@ -44,16 +44,16 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
 - Adjustable Resolutions. <br />
-- Class labels will give each images an assigned name when downloaded, suitable for labeling images or organizing data collections.<br /><br />
+- Class labels will give each image an assigned name when downloaded, suitable for labeling images or organizing data collections directories.<br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
 - Capture button will start capturing images from stream and display it in the gallery below. <br />
-- The webserver can capture each images in an interval according to the given value from user. The interval cannot be less than 0.1.  <br />
+- The webserver can capture each images in an interval according to the input value. The interval cannot be less than 0.1.  <br />
 - Set Instances to limit the amount of images captured.<br /> <br />
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
-- Download button located on top right of the gallery will zip all captured images into one file and download.<br />
-- Clear buttons located on top left of the gallery will delete all captured images in the gallery.<br />
+- Download button located on the top left will zip all captured images into a single file and download.<br />
+- Clear buttons located on the top right corner will delete all captured images.<br />
 - User can delete each images in the gallery individually.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
