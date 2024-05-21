@@ -41,7 +41,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 <br />
 - Adjustable Camera Settings, to see more details about each setting does please visit.<br />
 - User can hide the setting console by clicking on the setting icon above.<br /><br />
-![alt text](/Images_for_readme/setting.PNG)
+![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br />
 - Adjustable Resolutions. <br />
 - Class labels will give each images an assigned name when downloaded, suitable for labeling images or organizing data collections.<br /><br />
