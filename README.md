@@ -38,7 +38,8 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 <br /><br /><br /><br />
 ## Webserver features
 - User can switch languages on the top right corner of the web.<br />
-- Adjustable Camera Settings, to see more details about each setting does please visit.<br />
+- Adjustable Camera Settings, to see more details about each setting please visit [
+https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0).<br />
 - User can hide the setting console by clicking on the setting icon above.<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
@@ -52,8 +53,8 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
 - Download button located on top right of the gallery will zip all captured images into one file and download.<br />
-- Clear buttons located on top left of the gallery will delete all captured images in the gallery.<br /> <br />
-- User can delete each images in the gallery individually.<br /> <br />
+- Clear buttons located on top left of the gallery will delete all captured images in the gallery.<br />
+- User can delete each images in the gallery individually.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
 ## Credit
