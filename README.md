@@ -30,7 +30,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 5. Upload the code to your ESP32S3 and copy the IP address. <br /><br />
 ![alt text](/Images_for_readme/ip_IDE.PNG)
 <br /><br /><br /><br />
-6. Open index.html file, and paste the the IP Address obtained from Arduino Serial output.<br /><br />
+6. Open index.html file, and paste the IP Address obtained from previously.<br /><br />
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
 7. Done!!!
