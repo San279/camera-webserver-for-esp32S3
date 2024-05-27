@@ -3,7 +3,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 
 ## What you'll need
 - [Arduino IDE](https://www.arduino.cc/en/software), preferably the latest ones, but older versions will still do the job.
-- [CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en) web extensions for your targeted browser.
+- ESP32-S3 is preferable but older version will do just fine.
 
 ## Project files descriptions
 
@@ -12,28 +12,24 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 3. index.js - Javascript functions for HTML element and streaming.
 4. styles.css - makes webserver looks more lively.
 
-
 ## How to Install and run the project
 
-1. Enable CORS extension in your default browser.<br /><br />
-![alt text](/Images_for_readme/CORS.PNG)
-<br /><br /><br /><br />
-2. Download the project and unzip it to your Arduino Directory on your PC. <br /><br />
+1. Download the project and unzip it to your Arduino Directory on your PC. <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
-3. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
+2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
 ![alt text](/Images_for_readme/ssidPassword.PNG)
 <br /><br /><br /><br />
-4. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br /><br />
+3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br /><br />
 ![alt text](/Images_for_readme/IDE_configure.PNG)
 <br /><br /><br /><br />
-5. Upload the code to your ESP32S3 and copy the IP address. <br /><br />
+4. Upload the code to your ESP32S3 and copy the IP address. <br /><br />
 ![alt text](/Images_for_readme/ip_IDE.PNG)
 <br /><br /><br /><br />
-6. Open index.html file, and paste the IP Address obtained from previously.<br /><br />
+5. Open index.html file, and paste the IP Address obtained from previously.<br /><br />
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
-7. Done!!!
+6. Done!!!
 ![alt text](/Images_for_readme/done.PNG)<br /><br />
 <br /><br /><br /><br />
 ## Webserver features
