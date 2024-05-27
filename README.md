@@ -1,5 +1,5 @@
 # Esp32 camera webserver for data collection
-This project was intended to use for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse](https://edgeimpulse.com/). Instead of saving images to the SD card like most Esp32 webserver projects, users can download images to their computer directly. Furthermore, users can manipulate Esp32S3 camera resolutions and sensors settings. Just download the files and place it inside the Arduino directory and you're good to go! 
+This project was intended to use for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse](https://edgeimpulse.com/). Users can collect images from the webserver and download to their computer directly. User can aslo manipulate Esp32S3 camera resolutions and sensors settings. Just unzip the project inside the Arduino directory and you're good to go! 
 
 ## What you'll need
 - [Arduino IDE](https://www.arduino.cc/en/software), preferably the latest ones, but older versions will still do the job.
@@ -14,7 +14,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 
 ## How to Install and run the project
 
-1. Download the project and unzip it to your Arduino Directory on your PC. <br /><br />
+1. Download the project and unzip it to your Arduino Directory. <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
 2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
@@ -36,7 +36,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 - User can switch languages on the top right corner of the web.<br />
 - Adjustable Camera Settings, to see more details about each setting please visit [
 https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0).<br />
-- User can hide the setting console by clicking on the setting icon above.<br /><br />
+- User can hide the setting console by clicking on the icon above.<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
 - Adjustable Resolutions. <br />
