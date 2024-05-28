@@ -5,19 +5,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Image Collection</title>
+  <title>Esp32 Camera Webserver</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="height: 100%; width: 100vw;background-color: #348285; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-  <br/>
-  <div class = "language-container">
-    <text id = "englishSelect" class = "english">English</text>
-    <text style = "font-size: 15px; color: bisque;">&nbsp&nbsp| &nbsp&nbsp</text>
-    <text id = "thaiSelect" class = "thai">ไทย</text>
+<body style="height: 100%; width: 99vw;background-color: #348285; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+  <div class="navigation-bar">
+    <div class="setting-container">
+      <img class = "setting-icon" id = "setting" src = "icons/setting.png">
+      <img class = "arrow" id = "arrow" src = "icons/caret-down.png">
+      <div id ="setting-contents" class="setting-contents">
+        <text id="brightLabel" class="basic-setting-label"></text>
+        <select id="brightness" class="basic-setting-input">
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <text id="contrastLabel" class="basic-setting-label"></text>
+        <select id="contrast" class="basic-setting-input">
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <text id="saturationLabel" class="basic-setting-label"></text>
+        <select id="saturation" class="basic-setting-input">
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <text id="whiteballLabel" class="basic-setting-label"></text>
+        <select id="whiteball" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+        <text id="awbLabel" class="basic-setting-label"></text>
+        <select id="awb" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+        <text id="aeLabel" class="basic-setting-label"></text>
+        <select id="ae" class="basic-setting-input">
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <text id="aec2Label" class="basic-setting-label"></text>
+        <select id="aec2" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+        <text id="agcLabel" class="basic-setting-label"></text>
+        <select id="agc" class="basic-setting-input">
+          <option value="0">off</option>
+          <option value="1">lowest</option>
+          <option value="7">low</option>
+          <option value="15">medium</option>
+          <option value="20">high</option>
+          <option value="25">very high</option>
+          <option value="30">max</option>
+        </select>
+        <text id="gainCelingLabel" class="basic-setting-label"></text>
+        <select id="gainCeling" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <text id="rawGmaLabel" class="basic-setting-label"></text>
+        <select id="rawGma" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+        <text id="effectLabel" class="advance-setting-label"></text>
+        <select id="effect" class="advance-setting-input">
+          <option value="0">No Effect</option>
+          <option value="1">Negative</option>
+          <option value="2">Grayscale</option>
+          <option value="3">Red Tint</option>
+          <option value="4">Green Tint</option>
+          <option value="5">Blue Tint</option>
+          <option value="6">Sepia</option>
+        </select>
+        <text id="modeLabel" class="advance-setting-label"></text>
+        <select id="mode" class="advance-setting-input">
+          <option value="0">Auto</option>
+          <option value="1">Sunny</option>
+          <option value="2">Cloudy</option>
+          <option value="3">Office</option>
+          <option value="4">Home</option>
+        </select>
+        <text id="vflipLabel" class="basic-setting-label"></text>
+        <select id="vflip" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+        <text id="hmirrorLabel" class="basic-setting-label"></text>
+        <select id="hmirror" class="basic-setting-input">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+    </div>
+    <div class="language-container">
+      <text id="englishSelect" class="english">English</text>
+      <text style="font-size: 15px; color: bisque;">&nbsp&nbsp| &nbsp&nbsp</text>
+      <text id="thaiSelect" class="thai">ไทย</text>
+    </div>
   </div>
-  <br/>
-  <div class = "class-container">
+  <br />
+  <div class="class-container">
     <text id="classLabel" class="class_label"></text>
     <input type="text" id="class" name="className" class="class_input">
   </div>
@@ -26,103 +133,52 @@
     <img id="stream" class="stream" crossorigin="anonymous" />
     <br />
     <select id="resolution" class="resolution">
-      <option value="160120">QQVGA 160X120</option>
-      <option value="240240">240X240</option>
-      <option value="320240">QVGA 320X240</option>
-      <option value="640480">VGA 640X480</option>
-      <option value="800600">SVGA 800X600</option>
-      <option value="1024768">XGA 1024X768</option>
-      <option value="12801024">SXGA 1280X1024</option>
-      <option value="16001200">UXGA 1600X1200</option>
+      <option value="0">96X96</option>
+      <option value="1">QQVGA 160X120</option>
+      <option value="2">176X144</option>
+      <option value="3">240X176</option>
+      <option value="4">240X240</option>
+      <option value="5">QVGA 320X240</option>
+      <option value="6">400X296</option>
+      <option value="7">480X320</option>
+      <option value="8">VGA 640X480</option>
+      <option value="9">SVGA 800X600</option>
+      <option value="10">XGA 1024X768</option>
+      <option value="11">720p 1280X720</option>
+      <option value="12">SXGA 1280X1024</option>
     </select>
   </div>
-  <br/>
-  <br/>
-  <br/>
-  </body>
-  <div class="console-container">
-    <div class="row">
-      <img id="stop" class="stop" src = "icons/stop_9503472.png">
-      <img id="capture" class="capture" src = "icons/camera_7369145.png">
-    </div>
-    <br/>
-    <div class = "row">
-      <text id = "intervalLabel" class="interval_label"></text>
-      <input type="number" id="interval" class="interval">
-      &nbsp&nbsp
-      <text id ="instanceLabel" class="instance_label"></text>
-      <input type="number" id="instance" class="instance">
-    </div>
-    <div class="row">
-      <text id = "brightLabel" class="basic-setting-label"></text>
-      <select id="brightness" class="basic-setting-input">
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-      <text id ="contrastLabel" class="basic-setting-label"></text>
-      <select id="contrast" class="basic-setting-input">
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-      &nbsp
-      <text id ="saturationLabel" class="basic-setting-label"></text>
-      <select id="saturation" class="basic-setting-input">
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-      <text id ="aeLabel" class="basic-setting-label"></text>
-      <select id="ae" class="basic-setting-input">
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
-    <div class="row">
-      <text id ="effectLabel" class="advance-setting-label"></text>
-      <select id="effect" class="advance-setting-input">
-        <option value="0">No Effect</option>
-        <option value="1">Negative</option>
-        <option value="2">Grayscale</option>
-        <option value="3">Red Tint</option>
-        <option value="4">Green Tint</option>
-        <option value="5">Blue Tint</option>
-        <option value="6">Sepia</option>
-      </select>
-      &nbsp
-      <text id ="modeLabel" class="advance-setting-label"></text>
-      <select id="mode" class="advance-setting-input">
-        <option value="0">Auto</option>
-        <option value="1">Sunny</option>
-        <option value="2">Cloudy</option>
-        <option value="3">Office</option>
-        <option value="4">Home</option>
-      </select>
-    </div>
-    <div class="row">
-      <img id="download" class="download" src = "icons/document_5425860.png">
-      <input type="number" id="image_no" class="image-no">
-      <img id="clear" class="clear" src = "icons/document_5425848.png">
-    </div>
-  </div>
   <br />
   <br />
-  <div id="galleryImg" class="galleryImg">
-  </div>
-  <div id="savedImg" class="savedImg">
+  <br />
+</body>
+<div class="console-container">
+  <div class="row">
+    <img id="stop" class="stop" src="icons/stop_9503472.png">
+    <img id="capture" class="capture" src="icons/camera_7369145.png">
   </div>
   <br />
-  <script src="index.js"></script>
+  <div class="row">
+    <text id="intervalLabel" class="interval_label"></text>
+    <input type="number" id="interval" class="interval">
+    &nbsp&nbsp
+    <text id="instanceLabel" class="instance_label"></text>
+    <input type="number" id="instance" class="instance">
+  </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id = "download-delete"  class = "download-delete">
+  <img id="download" class="download" src="icons/document_5425860.png">
+  <input type="number" id="image_no" class="image-no">
+  <img id="clear" class="clear" src="icons/document_5425848.png">
+</div>
+<br/>
+<div id="galleryImg" class="galleryImg">
+</div>
+<div id="savedImg" class="savedImg">
+</div>
+<br />
+<script src="index.js"></script>
 </body>
 
 </html>
