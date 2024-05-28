@@ -7,7 +7,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 
 ## Project files descriptions
 
-1. Collect_Images_Edge.ino - Containes Arduino codes for streaming camera images to the webserver.
+1. camera-webserver-for-esp32S3.ino - Containes Arduino codes for streaming camera images to the webserver.
 2. index.html - Contains HTML elements for streaming.
 3. index.js - Javascript functions for HTML element and streaming.
 4. styles.css - makes webserver looks more lively.
@@ -17,7 +17,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 1. Download the project and unzip it to your Arduino Directory. <br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
-2. Open Collect_Images_Edge.ino and enter WIFI SSID and PASSWORD.<br /><br />
+2. Open camera-webserver-for-esp32S3 directory and launch camera-webserver-for-esp32S3.ino. Enter WIFI SSID and PASSWORD.<br /><br />
 ![alt text](/Images_for_readme/ssidPassword.PNG)
 <br /><br /><br /><br />
 3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br /><br />
