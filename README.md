@@ -1,9 +1,10 @@
 # Esp32 camera webserver for data collection
-This project was intended to use for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse](https://edgeimpulse.com/). Users can collect images from the webserver and download to their computer directly. User can aslo manipulate Esp32S3 camera resolutions and sensors settings. Just unzip the project inside the Arduino directory and you're good to go! 
+This project was intended to use for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse](https://edgeimpulse.com/). The Hardware that was used were provided by [Wireless Solution Asia](https://wirelesssolution.asia/) Users can collect images from the webserver and download to their computer directly. User can aslo manipulate Esp32S3 camera resolutions and sensors settings. Just unzip the project inside the Arduino directory and you're good to go! 
 
 ## What you'll need
 - [Arduino IDE](https://www.arduino.cc/en/software), preferably the latest ones, but older versions will still do the job.
 - ESP32-S3 is preferable but older version will do just fine.
+- OV2640 camera or any OV series. 
 
 ## Project files descriptions
 
@@ -54,4 +55,4 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
 ## Credit
-This project was aimed to be used with WARP AIOT BOARD under [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) as an tool for data collection of the ESP32-S3. This project was inspired by [Eloquent Arduino](https://eloquentarduino.com/posts/esp32-cam-object-detection)
+Thanks to [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) for providing AIOT board to support this project. Also thanks to [RandomNerdTutorials]([RandomNerdTutorial](https://RandomNerdTutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant) for providing essential codes for streaming Esp32 camera to webserver.
