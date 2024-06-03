@@ -15,24 +15,29 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 
 ## How to Install and run the project
 
-1. Download the project and unzip it to your Arduino Directory. <br /><br />
+<strong> 1. Download the project and unzip it to your Arduino Directory. </strong>
+<br /><br />
 ![alt text](/Images_for_readme/folder_directory.PNG)
 <br /><br /><br /><br />
-2. Open camera-webserver-for-esp32S3 directory and launch camera-webserver-for-esp32S3.ino. Enter WIFI SSID and PASSWORD.<br /><br />
+<strong> 2. Open camera-webserver-for-esp32S3 directory and launch camera-webserver-for-esp32S3.ino. Enter WIFI SSID and PASSWORD.  </strong>
+<br /><br />
 ![alt text](/Images_for_readme/ssidPassword.PNG)
 <br /><br /><br /><br />
-3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".<br /><br />
+<strong> 3. Under tools change your Board to "ESP32S3 Dev Module" and PSRAM to "OPI PSRAM".  </strong>
+<br /><br />
 ![alt text](/Images_for_readme/IDE_configure.PNG)
 <br /><br /><br /><br />
-4. Upload the code to your ESP32S3 and copy the IP address. <br /><br />
+<strong> 4. Upload the code to your ESP32S3 and copy the IP address.  </strong>
+<br /><br />
 ![alt text](/Images_for_readme/ip_IDE.PNG)
 <br /><br /><br /><br />
-5. Open index.html file, and paste the IP Address obtained from previously.<br /><br />
+<strong> 5. Open index.html file, and paste the IP Address obtained from previously.  </strong>
+<br /><br />
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
-6. Done!!!
+<strong> 6. Done!!!  </strong>
 <br/> <br/>
-<strong> - I've created repository to provide simple guide to traning your model please visit [train-FOMO-object-detect-esp32](https://github.com/San279/train-FOMO-object-detect-esp32). </strong>
+<strong> - I've created repository to provide simple guide to traning FOMO object detection model please visit [train-FOMO-object-detect-esp32](https://github.com/San279/train-FOMO-object-detect-esp32). </strong>
 <br/> <br/>
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
