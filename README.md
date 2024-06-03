@@ -31,7 +31,10 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
 6. Done!!!
-![alt text](/Images_for_readme/done.PNG)<br /><br />
+<br/> <br/>
+<strong> - I've created repository to provide simple guide to traning your model please visit [train-FOMO-object-detect-esp32](https://github.com/San279/train-FOMO-object-detect-esp32). </strong>
+<br/> <br/>
+![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## Webserver features
 - User can switch languages on the top right corner of the web.<br />
