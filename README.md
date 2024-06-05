@@ -37,7 +37,7 @@ This project was intended to use for collecting images from Esp32S3 to train [FO
 <br /><br /><br /><br />
 <strong> 6. Done!!!  </strong>
 <br/> <br/>
-<strong> - I've created repository to provide simple guide to traning FOMO object detection model please visit [train-FOMO-object-detect-esp32](https://github.com/San279/train-FOMO-object-detect-esp32). </strong>
+<strong> - I've created repository to provide simple guide to training FOMO object detection model please visit [train-FOMO-object-detect-esp32](https://github.com/San279/train-FOMO-object-detect-esp32). </strong>
 <br/> <br/>
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
