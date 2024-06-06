@@ -61,5 +61,5 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 - ยูเซอร์สามารถเลือกลบรูปที่ไม่ต้องการได้.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
-## Credit
+## เครดิต
 ต้องขอขอบคุณ [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) สำหรับการสนับสนุนโปรเจ็คนี้ และ [RandomNerdTutorials]([RandomNerdTutorial](https://RandomNerdTutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant) สำหรับโค้ดส่วนสตรีมรูปภาพขึ้นบนเว็ปเซอร์เวอร์
