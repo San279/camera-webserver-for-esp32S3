@@ -5,7 +5,7 @@
  โปรเจ็คนี้ถูกออกแบบมาใช้กับ [FOMO](https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) AI ตรวจจับวัตถุ ในส่วนของการรวบรวมรูปภาพจากกล้อง Esp32 หรือ AIoT  บอร์ด เพื่อนำไปใช้ใน [Edge Impulse](https://edgeimpulse.com/) เพียงแค่ดาวน์โหลดไลบราลี่ลงเครื่องและแตกไฟล์ในแฟ้ม Arduino ก้เสร็จแล้ว
 <br/>
 ## สิงที่ต้องมี
- - AIoT บอร์ด Esp32-S3 หรือ Esp32 ที่มี PSRAM
+ - [AIoT](https://wirelesssolution.asia/) บอร์ด Esp32-S3 หรือ Esp32 ที่มี PSRAM
  - กล้อง OV 2640
  - [Arduino IDE](https://www.arduino.cc/en/software) อันเก่าหรือใหม่ก้ได้
 ## โครงสร้าง
@@ -52,7 +52,7 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
 - เมื่อกดปุ้มรูปกล้องจะเริ่มการบันทึกรูป <br />
-- ยูเซอร์สามารถเซ้ทเวลาระหว่างการบึนทึกรูปได้ ต่ำสุด 0.1 วินาที<br />
+- ยูเซอร์สามารถเซ็ทเวลาระหว่างการบึนทึกรูปได้ ต่ำสุด 0.1 วินาที<br />
 - เซ็ทจำนวนรูปที่อยากบันทึกต่อครั้ง.<br /> <br />
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
@@ -62,4 +62,4 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
 ## Credit
-Thanks to [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) for providing AIOT board to support this project. Also thanks to [RandomNerdTutorials]([RandomNerdTutorial](https://RandomNerdTutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant) for providing essential codes for streaming Esp32 camera to webserver.
+ต้องขอขอบคุณ [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) สำหรับการสนับสนุนโปรเจ็คนี้ และ [RandomNerdTutorials]([RandomNerdTutorial](https://RandomNerdTutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant) สำหรับโค้ดส่วนสตรีมรูปภาพขึ้นบนเว็ปเซอร์เวอร์
