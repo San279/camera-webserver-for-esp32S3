@@ -1,5 +1,5 @@
 # Esp32 camera webserver for data collection
-สำหรับ [ไทย](https://github.com/San279/camera-webserver-for-esp32S3/blob/master/README-th.md)
+[ภาษาไทย](https://github.com/San279/camera-webserver-for-esp32S3/blob/master/README-th.md)
 <br/>
 <br/>
 This project is dedicated for collecting images from Esp32S3 to train [FOMO object detection model](https://edge-impulse.gitbook.io/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) in [Edge Impulse](https://edgeimpulse.com/). The Hardware that was used were provided by [Wireless Solution Asia](https://wirelesssolution.asia/). Users can collect images from the webserver and download to their computer directly. User can aslo manipulate Esp32S3 camera resolutions and sensors settings. Just unzip the project inside the Arduino directory and you're good to go! 
