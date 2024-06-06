@@ -22,15 +22,15 @@
 <br /><br />
 ![alt text](/Images_for_readme/ssidPassword.PNG)
 <br /><br /><br /><br />
-<strong> 3. กดไปที่ tools ตรงตัวเลือกด้านบนและเปลี่ยน Board เป็น "ESP32S3 Dev Module" และเปลี่ยน PSRAM เป็น "OPI PSRAM".  </strong>
+<strong> 3. กดไปที่ tools ตรงตัวเลือกด้านบนและเปลี่ยน Board เป็น "ESP32S3 Dev Module" และเปลี่ยน PSRAM เป็น "OPI PSRAM"  </strong>
 <br /><br />
 ![alt text](/Images_for_readme/IDE_configure.PNG)
 <br /><br /><br /><br />
-<strong> 4. อัพโหลดโค้ดขึ้นบน ESP32-S3 เสร็จแล้วให้คัดลอก ip address.  </strong>
+<strong> 4. อัพโหลดโค้ดขึ้นบน ESP32-S3 เสร็จแล้วให้คัดลอก ip address  </strong>
 <br /><br />
 ![alt text](/Images_for_readme/ip_IDE.PNG)
 <br /><br /><br /><br />
-<strong> 5. เปิด index.html และนำ ip address ที่คัดลอกมาไปวางใว้ในกล่อง.  </strong>
+<strong> 5. เปิด index.html และนำ ip address ที่คัดลอกมาวางใว้ในกล่องและกด ok </strong>
 <br /><br />
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
