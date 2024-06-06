@@ -1,5 +1,5 @@
 ## เว็ปเซอร์กล้อง Esp32-S3
- For English please visit [Readme](https://github.com/San279/camera-webserver-for-esp32S3)
+ [For English version](https://github.com/San279/camera-webserver-for-esp32S3)
  <br/>
  <br/>
  โปรเจ็คนี้ถูกออกแบบมาใช้กับ [FOMO](https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) AI ตรวจจับวัตถุ ในส่วนของการรวบรวมรูปภาพจากกล้อง Esp32 หรือ AIoT  บอร์ด เพื่อนำไปใช้ใน [Edge Impulse](https://edgeimpulse.com/) เพียงแค่ดาวน์โหลดไลบราลี่ลงเครื่องและแตกไฟล์ในแฟ้ม Arduino
