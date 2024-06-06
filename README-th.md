@@ -8,7 +8,6 @@
  - AIoT บอร์ด Esp32-S3 หรือ Esp32 ที่มี PSRAM
  - กล้อง OV 2640
  - [Arduino IDE](https://www.arduino.cc/en/software) อันเก่าหรือใหม่ก้ได้
-<br/>
 ## โครงสร้าง
  1. camera-webserver-for-esp32S3.ino - c++ สำหรับสตรีมรูปภาพจากกล้อง Esp32 ขึ้นเว็ปเซอรเวอร์
  2. index.html - html สำหรับส่วนหน้าบ้านของเว็บไซต์
