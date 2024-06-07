@@ -48,7 +48,7 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
 - เปลี่ยนความละเอียดหรือมิติกล้อง <br />
-- ยูเซอร์สามารถตั้งชื่อ Class ได้ เหมาะสำหรับการเรียบเรียงรุปภาพให้เป็นระเบียบพอดาวโหลด์ <br /><br />
+- ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse จะไม่อัพโหลดรูปที่มีชื่อไฟล์เหมือนกันในแต่ละ class  <br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
 - เมื่อกดปุ้มรูปกล้องจะเริ่มการบันทึกรูป <br />
