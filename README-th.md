@@ -43,11 +43,11 @@
 ## ฟีเจอร์ของเว็ปเซอร์
 - ยูเซอร์สามารถเปลี่ยนภาษา ตรงด้านขวาบนของหน้าเว็ป <br />
 - เปลี่ยนการตั้งค่าต่างๆ ของกล้องได้ ดูเพิ่มเติมได้ที่[
-https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0).<br />
+https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0)<br />
 - ยูเซอร์เลือกที่จะแอบการตั้งค่าของกล้องได้ กดตรงปุ่ม icon ด้านบน<br /><br />
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
-- เปลี่ยนความละเอียดหรือมิติกล้อง. <br />
+- เปลี่ยนความละเอียดหรือมิติกล้อง <br />
 - ยูเซอร์สามารถตั้งชื่อ Class ได้ เหมาะสำหรับการเรียบเรียงรุปภาพให้เป็นระเบียบพอดาวโหลด์ <br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
