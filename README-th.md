@@ -2,7 +2,7 @@
  [For English version](https://github.com/San279/camera-webserver-for-esp32S3)
  <br/>
  <br/>
- โปรเจ็คนี้ถูกออกแบบมาใช้กับ [FOMO](https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) AI ตรวจจับวัตถุ ในส่วนของการรวบรวมรูปภาพจากกล้อง Esp32 หรือ AIoT  บอร์ด เพื่อนำไปใช้ใน [Edge Impulse](https://edgeimpulse.com/) เพียงแค่ดาวน์โหลดไลบราลี่ลงเครื่องและแตกไฟล์ในแฟ้ม Arduino
+ โปรเจ็คนี้ถูกออกแบบมาให้ใช้กับ AI ตรวจจับวัตถุ[FOMO](https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices) ในส่วนของการรวบรวมรูปภาพจาก AIoT บอร์ด ขึ้นเว็ปเซอร์เวอร์ เพื่อนำไปใช้ใน [Edge Impulse](https://edgeimpulse.com/)
 <br/>
 ## สิงที่ต้องมี
  - [AIoT](https://wirelesssolution.asia/) บอร์ด Esp32-S3 หรือ Esp32 ที่มี PSRAM
@@ -35,9 +35,7 @@
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
 <strong> 6. เสร็จสิ้น  </strong>
-<br/> <br/>
-<strong> - เราสามารถใช้ไลบรารี่นี้ ในส่วนของการรวบรวมรูปภาพสำหรับ [FOMO](https://github.com/San279/train-FOMO-object-detect-esp32) AI ตรวจจับวัตถุ </strong>
-<br/> <br/>
+<br/> <br/> <br/> <br/>
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## ฟีเจอร์ของเว็ปเซอร์
@@ -48,17 +46,17 @@ https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/bl
 ![alt text](/Images_for_readme/setting.PNG)
 <br /><br /><br />
 - เปลี่ยนความละเอียดหรือมิติกล้อง <br />
-- ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse จะไม่อัพโหลดรูปที่มีชื่อไฟล์เหมือนกันในแต่ละ class  <br /><br />
+- ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse ไม่สามารถอัพโหลดรูปที่มีชื่อเหมือนกันได้ <br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
 <br /><br /><br />
-- เมื่อกดปุ้มรูปกล้องจะเริ่มการบันทึกรูป <br />
-- ยูเซอร์สามารถเซ็ทเวลาระหว่างการบึนทึกรูปได้ ต่ำสุด 0.1 วินาที<br />
+- เมื่อกดปุ่มรูปกล้องจะเริ่มการบันทึกรูปภาพในเฟรมข้างล้าง <br />
+- ยูเซอร์สามารถเซ็ทเวลาระหว่างการบึนทึกแต่ละรูปได้ต่ำสุด 0.1 วินาที<br />
 - เซ็ทจำนวนรูปที่อยากบันทึกต่อครั้ง.<br /> <br />
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
-- เมื่อกดปุ้ม Download ตรงซ้ายบนของ gallery จะรวมรูปภาพทั้งหมดใว้ในแฟ้มเดียวและดาวโหลดเป็น zip<br />
-- ปุ้ม Clear ตรงขวาบนจะลบรูปที่บันทึกใว้ทั้งหมด<br />
-- ยูเซอร์สามารถเลือกลบรูปที่ไม่ต้องการได้.<br /><br />
+- เมื่อเราบึนทึกรูปแล้ว เราสามารถดาวโหลดรูปถาพโดยการกดไปที่ปุ่มตรงด้านซ้ายบนของรูปภาพ<br />
+- ลบรูปที่บันทึกใว้ทั้งหมดด้วยการกดปุ่มช่องด้านขวาของรูปถาพ<br />
+- เราสามารถลบรูปถาพที่ไม่ต้องการได้.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
 <br /> <br /><br /> <br />
 ## เครดิต
