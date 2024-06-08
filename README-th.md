@@ -39,21 +39,20 @@
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## ฟีเจอร์ของเว็ปเซอร์
-- เปลี่ยนภาษา <br />
-- เปลี่ยนการตั้งค่าต่างๆ ของกล้องได้ แนะทำให้เซ็ทความอิ่มสีใว้ที่ 2 หรือ สามารถดูเพิ่มเติมได้ที่[https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0) <br />
-- เปลี่ยนความละเอียดหรือมิติกล้อง <br />
-- ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse ไม่สามารถอัพโหลดรูปที่มีชื่อเหมือนกันได้ <br /><br />
-![alt_text](/Images_for_readme/resolution_class.PNG)
-<br /><br /><br />
-- เมื่อกดปุ่มรูปกล้องจะเริ่มการบันทึกรูปภาพในเฟรมข้างล้าง <br />
-- ยูเซอร์สามารถเซ็ทเวลาระหว่างการบึนทึกแต่ละรูปได้ต่ำสุด 0.1 วินาที<br />
-- เซ็ทจำนวนรูปที่อยากบันทึกต่อครั้ง.<br /> <br />
+- เมื่อกดปุ่มรูปกล้องจะเริ่มการบันทึกรูปภาพใว้ในแฟ้มตรงด้านล้าง <br />
+- เราสามารถเซ็ทเวลาระหว่างการบึนทึกรูปจากกล้อง<br />
+- เซ็ทจำนวนรูปที่อยากบันทึกต่อครั้ง<br /> <br />
 ![alt_text](/Images_for_readme/capture_console.PNG)
 <br /><br /> <br />
 - เมื่อเราบึนทึกรูปแล้ว เราสามารถดาวโหลดรูปถาพโดยการกดไปที่ปุ่มตรงด้านซ้ายบนของรูปภาพ<br />
 - ลบรูปที่บันทึกใว้ทั้งหมดด้วยการกดปุ่มช่องด้านขวาของรูปถาพ<br />
 - เราสามารถลบรูปถาพที่ไม่ต้องการได้.<br /><br />
 ![alt_text](/Images_for_readme/gallery_img.PNG)
+- เปลี่ยนการตั้งค่าต่างๆ ของกล้องได้ แนะทำให้เซ็ทความอิ่มสีใว้ที่ 2 หรือ สามารถดูเพิ่มเติมได้ที่[https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0) <br />
+- เปลี่ยนความละเอียดหรือมิติกล้อง <br />
+- ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse ไม่สามารถอัพโหลดรูปที่มีชื่อเหมือนกันได้ <br /><br />
+![alt_text](/Images_for_readme/resolution_class.PNG)
+<br /><br /><br />
 <br /> <br /><br /> <br />
 ## เครดิต
 ต้องขอขอบคุณ [WIRELESS SOLUTION ASIA CO.,LTD](https://wirelesssolution.asia/) สำหรับการสนับสนุนโปรเจ็คนี้ และ [RandomNerdTutorials]([RandomNerdTutorial](https://RandomNerdTutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant) สำหรับโค้ดส่วนสตรีมรูปภาพขึ้นบนเว็ปเซอร์เวอร์
