@@ -35,7 +35,7 @@
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
 <strong> 6. เสร็จสิ้น  </strong>
-<br/> <br/> <br/> <br/>
+<br/> <br/>
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## ฟีเจอร์ของเว็ปเซอร์
