@@ -39,10 +39,8 @@
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## ฟีเจอร์ของเว็ปเซอร์
-- เปลี่ยนภาษา<br />
-- เปลี่ยนการตั้งค่าต่างๆ ของกล้องได้ แนะทำให้เซ็ทความอิ่มสีใว้ที่ 2 หรือ สามารถดูเพิ่มเติมได้ที่[
-https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0)
-<br />
+- เปลี่ยนภาษา <br />
+- เปลี่ยนการตั้งค่าต่างๆ ของกล้องได้ แนะทำให้เซ็ทความอิ่มสีใว้ที่ 2 หรือ สามารถดูเพิ่มเติมได้ที่[https://heyrick.eu/blog/index.php?diary=20210418&keitai=0](https://heyrick.eu/blog/index.php?diary=20210418&keitai=0) <br />
 - เปลี่ยนความละเอียดหรือมิติกล้อง <br />
 - ยูเซอร์ควรตั้งชื่อของ Class หรือประเภทของวุตถุ เนื่องจาก Edge Impulse ไม่สามารถอัพโหลดรูปที่มีชื่อเหมือนกันได้ <br /><br />
 ![alt_text](/Images_for_readme/resolution_class.PNG)
