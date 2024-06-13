@@ -19,6 +19,9 @@ var modeLabel = document.getElementById("modeLabel");
 var vflipLabel = document.getElementById("vflipLabel");
 var hmirrorLabel = document.getElementById("hmirrorLabel");
 
+var englishSelect = document.getElementById("englishSelect");
+var thaiSelect = document.getElementById("thaiSelect");
+
 const en =
 {
   "class": "Class",
@@ -116,9 +119,9 @@ var captureButton = document.getElementById("capture");
 var clearButton = document.getElementById("clear");
 var stopButton = document.getElementById("stop");
 var downloadButton = document.getElementById("download");
+
 var picture = document.getElementById("stream");
 var loadingIcon = document.getElementById("loading");
-
 var setting = document.getElementById('setting');
 var settings_contents = document.getElementById("setting-contents");
 var arrow = document.getElementById("arrow");
@@ -142,6 +145,7 @@ async function getStreamAddress() {
     localStorage.setItem('settingPath', convertedHttpSetting);
     return convertedHttpStream;
   }
+  console.log(previousStreamRequest);
   return previousStreamRequest;
 }
 
@@ -344,6 +348,7 @@ async function changeResolution() {
 }
 
 async function changeSettingApi(params) {
+  
   await stopStream();
   let settingAddress = localStorage.getItem('settingPath');
   const response = await fetch(settingAddress + params);
@@ -352,6 +357,7 @@ async function changeSettingApi(params) {
     console.log(data);
     return data;
   }
+  
 }
 
 async function updateSettings(cameraStatus){
@@ -377,6 +383,7 @@ async function updateSettings(cameraStatus){
 ////////////////////////////////////////////////////////
 
 async function getInitialSettingsAndStream() {
+  await fetchStream();
   getLanguage();
   const jsonCameraStatus = await changeSettingApi("resolution=4");
   await updateSettings(jsonCameraStatus);
