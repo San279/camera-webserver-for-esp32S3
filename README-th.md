@@ -34,8 +34,9 @@
 <br /><br />
 ![alt text](/Images_for_readme/ip_prompt.PNG)
 <br /><br /><br /><br />
-<strong> 6. เสร็จสิ้น  </strong>
+<strong> 6. เสร็จสิ้น  เราสามารถใช้ library นี้เก็บรูปภาพไปฝึก AI [กลับไปหน้าฝึก AI](https://github.com/San279/AIoT_Board/blob/main/Readme-th.md)</strong>
 <br/> <br/>
+
 ![alt text](/Images_for_readme/done.PNG)
 <br /><br /><br /><br />
 ## ฟีเจอร์ของเว็ปเซอร์
